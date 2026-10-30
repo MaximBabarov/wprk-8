@@ -1,0 +1,6 @@
+﻿  work.c
+C:\Users\Matsu\source\repos\work 8\work 8\work.c(126,16): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Matsu\source\repos\work 8\work 8\work.c(131,16): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Matsu\source\repos\work 8\work 8\work.c(136,1): warning C4716: task3: должна возвращать значение
+C:\Users\Matsu\source\repos\work 8\work 8\work.c(86,1): warning C4716: task0: должна возвращать значение
+  work 8.vcxproj -> C:\Users\Matsu\source\repos\work 8\x64\Debug\work 8.exe
