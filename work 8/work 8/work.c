@@ -84,25 +84,25 @@ int task0(int num, char ch1, char ch2)
 	}
 	printf("+");
 }
-int task1(int n, int m, int n2)
-{
+int task1(int n, int m, int n2) {
 	int s = 0;
 	int k = 0;
-	for (int i = m; i >= n; i--)
-	{
+	for (int i = m; i >= n; i--) {
 		s += i;
-		printf("выполнено %d раз", k++);
-		printf("\n");
+		printf("выполнено %d раз\n", k++);
 	}
-	printf("результат %d", s);
-	printf("\n");
+	printf("\nсумма = %d\n", s);
+	printf("\nЗадание 1А\n");
+	printf("%7s%7s\n", "2^x", "K=1024");
+	for (int i = 0; i <= n2; i++) {
+		int val = 1 << i;
+		if (val > m) {
+			printf("Достигнуто ограничение по значению m (%d)\n", m);
+			break;
+		}
+		printf("%7d%7.1f\n", val, (double)val / 1024.0);
+	}
 
-	printf("%7s%7s", "2^x", "K=1024");
-	printf("\n");
-	for (int i = 0; i <= n2; i++)
-	{
-		printf("%7d%7.1fK\n", 1 << i, (double)(1 << i) / 1024.0);
-	}
 	return 0;
 }
 int task2(float tab, float x)
@@ -117,21 +117,18 @@ int task2(float tab, float x)
 }
 int task3(int N)
 {
-	float s = 0.0;
-	for (int count = 1; count <= N; count++)
-	{
-		if (count == N)
-		{
-			printf("%f", 1.0 + count * 0.1);
-			s = s * 1.0 + count * 0.1;
+	float s = 1.0f;
+	for (int count = 1; count <= N; count++) {
+		if (count == N) {
+			printf("1.%d", count);
 		}
-		else
-		{
-			printf("%f*", 1.0 + count * 0.1);
-			s = s * 1.0 + count * 0.1;
+		else {
+			printf("1.%d * ", count);
 		}
-		
+		s *= (1.0f + count * 0.1f);
 	}
-	printf("= %f", s);
+	printf(" =%f", s);
+
+	return 0;
 }
 	
